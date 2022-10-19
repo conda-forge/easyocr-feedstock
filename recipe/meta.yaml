@@ -1,5 +1,5 @@
 {% set name = "easyocr" %}
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/jaidedai/easyocr/archive/v{{ version }}.tar.gz
-  sha256: 8f7259c64bc7317de3ea88e999d0eeff4c03795c215bf9aa789f403e3649ae04
+  sha256: 0ed5af2b739ce2303c5173d520b631df311d54a9aa58a80e09fe33d44c0a8115
 
 build:
-  skip: True  # [win]
+  skip: true  # [win]
   entry_points:
     - easyocr= easyocr.cli:main
   script: {{ PYTHON }} -m pip install . -vv
