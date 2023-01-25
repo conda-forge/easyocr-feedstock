@@ -1,24 +1,41 @@
+<<<<<<<< HEAD:.ci_support/linux_aarch64_python3.8.____cpython.yaml
 BUILD:
 - aarch64-conda_cos7-linux-gnu
 cdt_arch:
 - aarch64
 cdt_name:
 - cos7
+========
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
+>>>>>>>> 28ea5f4c3f1bfec2bf27c69e755fbb4f86dcccab:.ci_support/osx_arm64_python3.9.____cpython.yaml
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
+<<<<<<<< HEAD:.ci_support/linux_aarch64_python3.8.____cpython.yaml
 - '11'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
+========
+- '14'
+macos_machine:
+- arm64-apple-darwin20.0.0
+>>>>>>>> 28ea5f4c3f1bfec2bf27c69e755fbb4f86dcccab:.ci_support/osx_arm64_python3.9.____cpython.yaml
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
+<<<<<<<< HEAD:.ci_support/linux_aarch64_python3.8.____cpython.yaml
 - 3.8.* *_cpython
 target_platform:
 - linux-aarch64
+========
+- 3.9.* *_cpython
+target_platform:
+- osx-arm64
+>>>>>>>> 28ea5f4c3f1bfec2bf27c69e755fbb4f86dcccab:.ci_support/osx_arm64_python3.9.____cpython.yaml
