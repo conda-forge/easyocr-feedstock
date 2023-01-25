@@ -41,6 +41,9 @@ requirements:
     - scipy
     - shapely
     - torchvision >=0.5
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
 
 test:
   imports:
