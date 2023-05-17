@@ -14,7 +14,7 @@ build:
   entry_points:
     - easyocr= easyocr.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -35,7 +35,7 @@ requirements:
     - numpy
     - pillow
     - python-bidi
-    - py-opencv <=4.5.4.60
+    - py-opencv
     - pyclipper
     - python
     - pytorch
