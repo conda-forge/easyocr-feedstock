@@ -1,5 +1,5 @@
 {% set name = "easyocr" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jaidedai/easyocr/archive/v{{ version }}.tar.gz
-  sha256: 6f26c99ecfd3f715932e470836c2dd80fb55509df18955ff863f0212d19c23ad
+  sha256: 1ae2f108be817cb39a288e1bcf8c3567daecd34647ef7bbf2490c7ed6c0b6b9a
 
 build:
   skip: true  # [win]
