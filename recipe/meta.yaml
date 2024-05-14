@@ -43,6 +43,9 @@ requirements:
     - torchvision >=0.5
 
 test:
+  requires:
+    # https://github.com/conda-forge/opencv-feedstock/issues/400#issuecomment-2009561076
+    - libopencv *=headless*  # [linux]
   imports:
     - easyocr
   commands:
