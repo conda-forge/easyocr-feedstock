@@ -45,6 +45,7 @@ requirements:
     - scipy
     - shapely
     - torchvision >=0.5
+    - ninja
 
 test:
   requires:
