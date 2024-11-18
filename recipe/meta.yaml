@@ -30,6 +30,7 @@ requirements:
     - {{ cdt('libxext') }}     # [linux]
     - pip
     - python
+    - setuptools
   run:
     - ninja
     - numpy
@@ -49,9 +50,11 @@ test:
   requires:
     # https://github.com/conda-forge/opencv-feedstock/issues/400#issuecomment-2009561076
     - libopencv *=headless*  # [linux]
+    - pip
   imports:
     - easyocr
   commands:
+    - pip check
     - easyocr --help
 
 about:
