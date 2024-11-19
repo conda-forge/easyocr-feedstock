@@ -20,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=${{ python_min }}
+    - python >={{ python_min }}
     - pytorch
     - torchvision >=0.5
     - py-opencv
@@ -40,7 +40,7 @@ requirements:
 
 test:
   requires:
-    - python ${{ python_min }}
+    - python {{ python_min }}
     - pip
     # https://github.com/conda-forge/opencv-feedstock/issues/400#issuecomment-2009561076
     - libopencv *=headless*  # [linux]
