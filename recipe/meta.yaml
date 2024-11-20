@@ -1,5 +1,5 @@
 {% set name = "easyocr" %}
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,16 @@ package:
 
 source:
   url: https://github.com/jaidedai/easyocr/archive/v{{ version }}.tar.gz
-  sha256: 1ae2f108be817cb39a288e1bcf8c3567daecd34647ef7bbf2490c7ed6c0b6b9a
+  sha256: 1c20356483964c7c80ccf86f2a0957cfed47768e9bbc99b9ff2eb47cb9cb1448
+  patches:
+    - 0001-remove-ninja-requirement.patch
 
 build:
   skip: true  # [win]
   entry_points:
     - easyocr= easyocr.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -30,6 +32,7 @@ requirements:
     - {{ cdt('libxext') }}     # [linux]
     - pip
     - python
+    - setuptools
   run:
     - ninja
     - numpy
@@ -44,14 +47,17 @@ requirements:
     - scipy
     - shapely
     - torchvision >=0.5
+    - ninja
 
 test:
   requires:
     # https://github.com/conda-forge/opencv-feedstock/issues/400#issuecomment-2009561076
     - libopencv *=headless*  # [linux]
+    - pip
   imports:
     - easyocr
   commands:
+    - pip check
     - easyocr --help
 
 about:
