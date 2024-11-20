@@ -1,0 +1,7 @@
+--- requirements.txt	2024-09-24 07:18:06.000000000 -0400
++++ requirements.txt	2024-11-20 10:40:28.302503700 -0500
+@@ -9,4 +9,3 @@
+ PyYAML
+ Shapely
+ pyclipper
+-ninja
